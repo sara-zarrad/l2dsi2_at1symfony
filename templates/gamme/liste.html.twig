@@ -1,0 +1,19 @@
+{% extends'base.html.twig' %}
+{% block title %}{{ parent() }}L2DSI2{% endblock %}
+{%  block body %}
+    <b><h1>
+            Liste des Gammes informatiques
+        </h1></b>
+    <ul>
+        {% for value in tab %}
+
+            <li>
+                <h4> {{ value|title }}</h4>
+            </li>
+
+
+        {% else %}
+            Tableau vide
+        {% endfor %}
+    </ul>
+{% endblock %}
